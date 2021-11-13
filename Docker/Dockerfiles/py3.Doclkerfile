@@ -1,0 +1,26 @@
+FROM nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
+
+ENV PYTHON_VERSION 3.7.0
+
+
+# python 3.7 and pip3
+RUN apt-get update && apt-get upgrade -y && \
+    apt install -y  --no-install-recommends make cmake gcc git g++ unzip wget build-essential zlib1g-dev libffi-dev libssl-dev && \
+    apt clean && \
+    wget https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz && \
+    tar zxf Python-${PYTHON_VERSION}.tgz && \
+    cd Python-${PYTHON_VERSION} && \
+    ./configure && \
+    make altinstall
+
+
+
+RUN ln -s /usr/local/bin/python3.7 /bin/python3 && \
+    ln -s /usr/local/bin/pip3.7 /bin/pip3
+
+# pytorch
+RUN pip3 install --upgrade pip
+RUN pip3 install torch==1.5.1+cu101 torchvision==0.6.1+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+
+# ENTRYPOINT [ "/usr/bin/tini", "--" ]
+CMD [ "/bin/bash" ]

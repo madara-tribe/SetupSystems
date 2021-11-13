@@ -1,0 +1,14 @@
+albumentations
+python-dotenv
+scikit-image
+scikit-learn
+tqdm
+wandb
+yacs
+git+https://github.com/qubvel/segmentation_models.pytorch
+# used in jupyter notebooks
+jupyter
+matplotlib
+# dev
+flake8
+isort

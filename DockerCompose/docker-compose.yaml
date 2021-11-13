@@ -1,0 +1,30 @@
+version: "2.3"
+services:
+    signate:
+        runtime: nvidia
+        build:
+            context: ./docker
+        volumes:
+            - ${HOME}/data/signate_sar:/work/data
+            - ${HOME}/data/signate_sar_artifacts:/work/artifacts
+            - ${PWD}:/work
+        ports:
+            - 8888:8888  # jupyter
+        tty: true
+        ipc: host  # necessary to avoid torch dataloader error
+    signate_cuda10:
+        runtime: nvidia
+        build:
+            context: ./docker
+            args:
+                CUDA: 10.1
+                CUDNN: 7
+                PYTORCH: 1.6.0
+        volumes:
+            - ${HOME}/data/signate_sar:/work/data
+            - ${HOME}/data/signate_sar_artifacts:/work/artifacts
+            - ${PWD}:/work
+        ports:
+            - 8888:8888  # jupyter
+        tty: true
+        ipc: host  # necessary to avoid torch dataloader error
