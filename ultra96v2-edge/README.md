@@ -26,18 +26,18 @@ keras==2.2.4
 tensorflow==1.13.1
 ```
 
-<img src="https://user-images.githubusercontent.com/48679574/146493987-c11c3190-7fa3-4a82-978b-bd8a34d27f80.png" width="500px">
+<img src="https://user-images.githubusercontent.com/48679574/146494590-ae502c38-fca4-4dc6-bead-b0a386f45d60.png" width="500px">
 
 
 ## Hardware platform 
 
-<img src="https://user-images.githubusercontent.com/48679574/146493975-44a491b9-fec0-45f2-980d-dded6850a2fd.png" width="500px">
+<img src="https://user-images.githubusercontent.com/48679574/146494600-7179f97f-9b01-4e24-9742-de056aa41556.png" width="500px">
 
 
 
 ## Parallel processing by C++ Multiple thread
 
-<img src="https://user-images.githubusercontent.com/48679574/146493991-75911008-9f82-4226-8572-507d80a98adc.png" width="500px">
+<img src="https://user-images.githubusercontent.com/48679574/146494610-e08904fe-41d2-41ea-9d6b-c951a8f2d30f.png" width="500px">
 
 
 ## this logic is summarized in my blog 
