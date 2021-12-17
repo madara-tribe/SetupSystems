@@ -6,11 +6,7 @@ Simply, show this repositry characteristic parts.
 
 # segmentation result by quantized model on FPGA
 
-input image & result image
-
-
-<img src="https://user-images.githubusercontent.com/48679574/103159027-ad09be80-4807-11eb-9eda-2d8daf13be6a.jpg" width="400px"><img src="https://user-images.githubusercontent.com/48679574/103159033-bbf07100-4807-11eb-8c01-0fd4ce7bfc7b.png" width="400px">
-
+<b>input image & result image</b>
 
 <img src="https://user-images.githubusercontent.com/48679574/146494490-12201c8c-2014-46bc-96b3-e895607604be.jpg" width="400px"><img src="https://user-images.githubusercontent.com/48679574/146494496-8d225041-7a04-4457-a7ac-3d75c0dd4cc8.png" width="400px">
 
