@@ -19,7 +19,7 @@ input image & result image
 
 # this AI eadge characteristic point
 
-## Quantized machine learning model architecture(Unet)
+## Overall flow to run on ultra96v2(AI edge)
 
 model libarary version is 
 ```
@@ -27,17 +27,18 @@ keras==2.2.4
 tensorflow==1.13.1
 ```
 
-<img src="https://user-images.githubusercontent.com/48679574/103159101-9d3eaa00-4808-11eb-906f-cc255b28a4eb.png" width="500px">
+<img src="https://user-images.githubusercontent.com/48679574/146493987-c11c3190-7fa3-4a82-978b-bd8a34d27f80.png" width="500px">
 
 
 ## Hardware platform 
 
-<img src="https://user-images.githubusercontent.com/48679574/103159128-e8f15380-4808-11eb-8903-15ab326f94a5.png" width="500px">
+<img src="https://user-images.githubusercontent.com/48679574/146493975-44a491b9-fec0-45f2-980d-dded6850a2fd.png" width="500px">
+
 
 
 ## Parallel processing by C++ Multiple thread
 
-<img src="https://user-images.githubusercontent.com/48679574/103159116-c52e0d80-4808-11eb-8bfa-0e7a8a55a670.png" width="500px">
+<img src="https://user-images.githubusercontent.com/48679574/146493991-75911008-9f82-4226-8572-507d80a98adc.png" width="500px">
 
 
 ## this logic is summarized in my blog 
