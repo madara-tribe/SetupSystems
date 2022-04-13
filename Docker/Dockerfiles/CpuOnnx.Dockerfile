@@ -76,6 +76,3 @@ RUN cd /tmp && \
     pip install dist/*
 RUN rm -rf /tmp/*
 
-# https://pytorch.org
-RUN cd /tmp && wget https://download.pytorch.org/libtorch/cpu/libtorch-cxx11-abi-shared-with-deps-1.10.0%2Bcpu.zip && \
-    unzip libtorch-cxx11-abi-shared-with-deps-1.10.0%2Bcpu.zip
