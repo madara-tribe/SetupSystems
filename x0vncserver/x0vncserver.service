@@ -1,0 +1,15 @@
+[Unit]
+Description=Remote desktop service (VNC)
+After=syslog.target
+After=network.target remote-fs.target nss-lookup.target
+After=x11-common.service 
+ 
+[Service]
+Type=forking
+User=hagi
+Group=hagi
+WorkingDirectory=/home/hagi
+ExecStart=/bin/sh -c 'sleep 10 && /usr/bin/x0vncserver -display :0  -rfbport 5900 -passwordfile /home/hagi/.vnc/passwd &'
+ 
+[Install]
+WantedBy=multi-user.target
