@@ -1,0 +1,29 @@
+sudo apt update
+sudo apt install tigervnc-stadalone-server tigervnc-scraping-server 
+sudo apt install tigervnc-standalone-server tigervnc-scraping-server 
+vncpasswd
+x0vncserver -display :0 -passwordfile ~/.vnc/passwd
+x0vncserver -display :1 -passwordfile ~/.vnc/passwd
+sudo vi /etc/systemd/system/x0vncserver.service
+systemctl daemon-reload
+sudo systemctl start x0vncserver.service
+sudo systemctl status x0vncserver.service
+sudo systemctl enable x0vncserver.service
+Created symlink /etc/systemd/system/multi-user.target.wants/x0vncserver.service → /etc/systemd/system/x0vncserver.service.
+
+hagi@jetson:~$ sudo systemctl status x0vncserver.service
+● x0vncserver.service - Remote desktop service (VNC)
+   Loaded: loaded (/etc/systemd/system/x0vncserver.service; en
+   Active: active (running) since Mon 2023-02-06 19:39:33 JST;
+  Process: 4717 ExecStart=/bin/sh -c sleep 10 && /usr/bin/x0vn
+ Main PID: 4791 (x0vncserver)
+    Tasks: 1 (limit: 4181)
+   CGroup: /system.slice/x0vncserver.service
+           └─4791 /usr/bin/x0vncserver -display :0 -rfbport 59
+
+ 2月 06 19:39:33 jetson systemd[1]: Starting Remote desktop se
+ 2月 06 19:39:33 jetson systemd[1]: Started Remote desktop ser
+lines 1-11
+
+
+systemctl list-units | grep vn
